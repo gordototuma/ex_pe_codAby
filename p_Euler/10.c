@@ -2,32 +2,31 @@
 #include<math.h>
 
 int main(){
-    
-    long int no_prime = 0;
-    long int count = 2;
-    long int suma = 0;
 
-    for (long int i = 2; count < 2000000; i++)
+    int contador_10001 = 1;
+    int count =3;
+    unsigned long long suma = 0;
+    for (int i = 2; i < count; i++)
     {
-        no_prime = 0;
-        for (long int j = 2; j <=sqrt(i); j++)
+        int s = 0;
+
+        for (int j = 2; j <= (int)sqrt(i); j++)
         {
-            if(i%j == 0 && i!=j) no_prime = 1;
+            if(i%j==0 && i!=j){ 
+                s=1;
+                break;
+            }
         }
-        
-        if(no_prime == 0){
-            //if(i>=2000000) break;
-            count = i;
-            printf("%d + ",i);
-            suma += i;                        
-        }   
-
-                    
-        
-    } 
-       
-
-    printf("\n%d", suma);
+        if (s==0){
+            if (i>2000000) break; 
+            //printf("%d - ", i); 
+            //printf("%d\n", contador_10001);
+            //contador_10001++;
+            suma += i;            
+        } 
+        count++;
+    }
+    printf("\nSuma = %lld", suma);
 
     return 0;
 }

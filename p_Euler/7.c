@@ -20,7 +20,7 @@ int main(){
             printf("%d - ", i); 
             printf("%d\n", contador_10001);
             contador_10001++;
-            if (contador_10001==10002) break; 
+            if (i>2000000) break; 
         } 
         count++;
     }
