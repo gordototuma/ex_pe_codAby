@@ -1,19 +1,13 @@
 with open('data.txt', 'r') as data:
-    print(data.readline())
-    print(data.readline())
-    data.readline()
-    print(data.readline())
-    """operacion = 0
-    for valor in data.readlines():
-        
-        if valor == '*\n': operacion *= int(data.readlines().rstrip('\n'))
-        elif valor == '+\n': operacion += int(data.readline())
-        elif valor == '%\n': operacion = operacion%int(data.readlines().rstrip('\n'))
-        else: 
-            operacion += int(valor)
-        print(operacion)
-        input()    
-    """
-        
     
-    #print(operacion)
+    modulo = 0
+    opracion = data.readlines()[0].split(' ')
+    suma = int(opracion[0])
+    for x in range(1,len(opracion)):
+        if opracion[x] =='+':            
+            suma +=int(opracion[x+1])
+        elif opracion[x] =='*':
+            suma *=int(opracion[x+1])                    
+        elif opracion[x] =='%':
+            modulo = int(suma)% int(opracion[x+1])    
+    print(modulo)

@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
 }
 
 """
-#RETO HACERLO EN C/C++
+#RETO: HACERLO EN C/C++
 
 with open('data.txt', 'r') as data:
     frase = data.readlines()[0].split(' ')

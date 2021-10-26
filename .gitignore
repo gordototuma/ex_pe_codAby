@@ -1,1 +1,5 @@
 *.exe
+*.tar.lz
+codeabbey/bigint-2010.04.30
+codeabbey/gmp-6.2.1
+*.zip
