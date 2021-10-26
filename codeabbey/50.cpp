@@ -1,7 +1,6 @@
 #include<iostream>
 #include<fstream>
-#include <stdio.h>
-#include <ctype.h>
+
 
 using namespace std;
 
